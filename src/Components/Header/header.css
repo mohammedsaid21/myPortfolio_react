@@ -1,6 +1,6 @@
 header {
   height: 105vh;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
   overflow: hidden;
 }
 
@@ -8,6 +8,15 @@ header {
   text-align: center;
   height: 100%;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_container h2{
+  font-size: 40px;
+}
+.header_container h5{
+  font-size: 20px;
 }
 
 .cta {
@@ -35,15 +44,34 @@ header {
 
 .me {
   background: linear-gradient(var(--color-primary) , transparent);
-  width: 22rem;
+  width: 29rem;
   height: 30rem;
-  margin: 4rem auto 0;
-  /* position: absolute;
-  left: calc(50% - 11rem); */
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 35% 66% 66% 35% / 35% 35% 66% 66%;
+  padding: 4rem 1.5rem 1.5rem 1.5rem;
+  animation: border-change 6s infinite ease-in-out;
+  border: 5px solid rgb(188, 208, 238);
+  box-shadow: aliceblue 0px 0px 13px 0px;
+} 
+/* .me img {
+  padding: 10px;
+} */
+@keyframes border-change {
+  0% {
+    border-radius: 35% 66% 66% 35% / 35% 35% 66% 66%;
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  70% {
+    border-radius: 60% 33% 33% 60% / 60% 60% 33% 33%;
+  }
+  100% {
+    border-radius: 35% 66% 66% 35% / 35% 35% 66% 66%;
+  }
 }
+
 
 .scroll_down {
   position: absolute;
@@ -51,7 +79,7 @@ header {
   right: -2.3rem;
   transform: rotate(90deg);
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.19rem;
 }
 
 /* ====== Media Query ========= */
@@ -59,16 +87,37 @@ header {
 
 @media screen and (max-width: 1024px){
   header {
-    height: 68vh;
+    height: 108vh;
   }
+  .me {
+    width: 21rem;
+    height: 22rem;
+  }
+ .scroll_down {
+  display: nooe;
+}
 }
 /* Small Device */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   header {
-    height: 110vh;
+    height: 190vh;
+    margin-bottom: 20px;
   }
   .header_socials , .scroll_down {
     display: none;
   }
+  .header_container {
+    padding-top: 100px;
+    flex-direction: column;
+  }
+  .info {
+    margin-bottom: 5rem;
+  }
 }
 
+@media screen and (max-width: 350px){
+  .me {
+    width: 16rem;
+    height: 16rem;
+  }
+}

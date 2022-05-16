@@ -43,16 +43,32 @@
   .experience_softskill, .experience_frontend {
     margin-bottom: 20px;
   }
+  .experience_container {
+    justify-content: space-around;
+  }
   .experience_container > div {
-    width: calc(100% / 2 - 30px);
+    width: calc(100% / 2 - 80px);
   }
 }
 
 @media screen and (min-width: 1300px) {
   .experience_container > div {
-    width: calc(100% / 4 - 30px);
+    width: calc(100% / 4 - 40px);
   }
   .experience_container {
     justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 768px ){
+  
+  .experience_container > div {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .experience_container > div h3 {
+    font-size: 14px;
+    text-align: center;
   }
 }

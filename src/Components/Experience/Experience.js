@@ -6,7 +6,9 @@ import Js from '../../assets/images/js.svg'
 import react from '../../assets/images/react.svg'
 import Sass from '../../assets/images/sass.png'
 import Tailwind from '../../assets/images/tailwind.svg'
+import Firebase from '../../assets/images/firebase.svg'
 import reduxi from '../../assets/images/redux.svg'
+import MATERIAL from '../../assets/images/MATERIAL.svg'
 import './style.css'
 
 const Experience = () => {
@@ -50,6 +52,16 @@ const Experience = () => {
         <div className="skill">
             <img src={Tailwind} alt="Tailwind" className="" />
             <h3 className="">Tailwind</h3>
+        </div>
+
+        <div className="skill">
+            <img src={MATERIAL} alt="MATERIAL" className="" />
+            <h3 className="">MATERIAL UI</h3>
+        </div>
+
+        <div className="skill">
+            <img src={Firebase} alt="Firebase" className="" />
+            <h3 className="">Firebase</h3>
         </div>
 
 
@@ -132,7 +144,6 @@ const Experience = () => {
             </article>
           </div>
         </div>
-
       </div> */}
 
     </section>

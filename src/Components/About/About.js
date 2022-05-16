@@ -1,19 +1,25 @@
 import React from 'react'
-import MEP  from '../../assets/person.jpg'
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
 import './about.css'
 const About = () => {
   return (
-    <section id='about'>
+    <section id='about'    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 
       <div className='container about_container'>
         <div className='about_me'>
           <div className='about_me_image'>
-            <img src={MEP} alt='' />
+          <img src='https://raw.githubusercontent.com/mohammedsaid21/mohammedsaid21/main/image/giphy.webp' />
           </div>
         </div>
 
@@ -39,9 +45,7 @@ const About = () => {
             </div>
 
               <p>
-                I love turning beautiful designs into usable websites that are responsive to various devices as well as being scalable.
-  learn new skills and work with new technologies is important to me for developing my self.
-  And I do this by learning and keeping up with new tools by reading documentation and following MDN.
+                I love turning beautiful designs into usable websites that are responsive to various devices as well as being scalable.learn new skills and work with new technologies is important to me for developing my self.And I do this by learning and keeping up with new tools by reading documentation and following MDN.
               </p>
               <a href='#contact' className='btn btn-primary'>Let's Talk</a>
 

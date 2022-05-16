@@ -1,36 +1,41 @@
+section#about {
+  margin-top: 0;
+}
 .about_container {
   display: flex;
   justify-content: space-around;
 }
 
 .about_me {
-  width: 30%;
-  height: 100%;
+  width: 33%;
+  height: 278px;
   aspect-ratio: 1/1;
   border-radius: 2rem;
   background: linear-gradient(
-  45deg,
-  transparent,
-  var(--color-primary),
-  transparent
-);
+    45deg, transparent, 
+    var(--color-primary), transparent
+  );
   place-items: center;
-}
-
-.about_content {
-  width: 50%;
+  transform: scale(1.08);
 }
 
 .about_me_image {
   border-radius: 2rem;
   overflow: hidden;
-  transform: rotate(10deg);
+  transform: rotate(8deg);
   transition: var(--transition);
   width: 100%;
 }
 
+.about_me_image img {
+  width: 110%;
+}
 .about_me_image:hover {
   transform: rotate(0);
+}
+
+.about_content {
+  width: 50%;
 }
 
 .about_cards {
@@ -73,13 +78,13 @@
 
 .about_content p {
   margin: 2rem 0 2.6rem;
-  color: var(--color-light);
+  color: #eee;
   letter-spacing: 1px;
   font-size: 15px;
 }
 
 /* MediaQuery */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   section {
     margin-top: 6rem;
     margin-bottom: 10rem;
@@ -90,8 +95,11 @@
     align-items: center;
   }
   .about_me {
-    width: 25%;
-    margin: 0 auto 3rem;
+    width: 37%;
+    margin: 0 auto 4rem;
+  }
+  .about_me_image img {
+    width: 125%;
   }
   .about {
     width: 50%;
@@ -100,16 +108,28 @@
   .about_content p {
     margin: 1rem 0 1.5rem;
   }
+
+}
+
+.about_me {
+  height: 240px;
 }
 
 @media screen and (max-width: 768px){ 
   .about_me {
-    width: 65%;
-    margin: 0 auto 3rem;
+    width: 60vw;
+    height: 320px;
+    margin: 0 auto 5rem;
   }
   .about_cards {
     flex-wrap: wrap;
-    
+  }
+
+  .header_container {
+    justify-content: center;
+  }
+  .about_me_image img {
+    width: 100%;
   }
   .about_card {
     width: 45%;
@@ -123,5 +143,43 @@
     margin: 1.5rem auto;
     width: 90%;
     font-size: 15px;
+  }
+}
+
+@media (max-width: 1260px) and (min-width: 1130px){
+  .about_me_image img {
+    /* width: 100% !important; */
+  }
+}
+@media (max-width: 1160px) and (min-width: 1030px){
+  .about_me {
+    height: 210px;
+    background-color: rgb(0, 0, 0);
+  }
+
+}
+
+@media screen and (max-width: 600px){ 
+  .about_me {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 500px){ 
+  .about_me {
+    width: 69vw;
+    height: 200px;
+    margin: 0 auto 6.2rem;
+  }
+  .about_me_image img {
+    width: 115%;
+  }
+}
+
+@media screen and (max-width: 380px){ 
+  .about_me {
+    height: 220px;
+    width: 80vw;
+    margin: 0 auto 5rem;
   }
 }

@@ -70,3 +70,22 @@ input, textarea {
   }
 }
 
+
+/* Anmi */
+.heart {
+  font-size: 30px;
+  animation: fall 1s 1 linear forwards;
+  position: fixed;
+  top: 0;
+  left: 300px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-5vh);
+  }
+
+  100% {
+    transform: translateY(110vh);
+  }
+}
